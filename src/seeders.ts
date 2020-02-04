@@ -1,7 +1,6 @@
 /**
  * Creates a "Glider".
  */
-
 export function createGlider(
   cells: boolean[],
   cellsPerDimension: number
@@ -15,6 +14,10 @@ export function createGlider(
   return cells;
 }
 
+/**
+ * Creates a random test scene.
+ * Found at https://stackoverflow.com/questions/9598552/a-suitable-game-of-life-seed-for-testing
+ */
 export function createRandomScene(
   cells: boolean[],
   cellsPerDimension: number
