@@ -48,7 +48,7 @@ const right = (idx: number) => idx + 1;
 const bottomLeftIdx = (idx: number) => idx + (CELLS_PER_DIM - 1);
 const bottomIdx = (idx: number) => idx + CELLS_PER_DIM;
 const bottomRightIdx = (idx: number) => idx + (CELLS_PER_DIM + 1);
-const neighbourFn = [
+const neighbourFns = [
   topLeftIdx,
   topIdx,
   topRightIdx,
@@ -68,7 +68,7 @@ const neighbourFn = [
 function countLiveNeighbours(currentIdx: number): number {
   let liveNeighbours = 0;
 
-  for (const checkNeighbour of neighbourFn) {
+  for (const checkNeighbour of neighbourFns) {
     const neighbourIdx = checkNeighbour(currentIdx);
     if (neighbourIdx < 0 || neighbourIdx >= TOTAL_CELLS) continue;
 
