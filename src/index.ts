@@ -66,16 +66,16 @@ const neighbourFn = [
  * @param currentIdx Current index to calculate neighbours for.
  */
 function countLiveNeighbours(currentIdx: number): number {
-  let live_neighbours = 0;
+  let liveNeighbours = 0;
 
   for (const checkNeighbour of neighbourFn) {
     const neighbourIdx = checkNeighbour(currentIdx);
     if (neighbourIdx < 0 || neighbourIdx >= TOTAL_CELLS) continue;
 
-    if (previousCells[neighbourIdx] === true) live_neighbours++;
+    if (previousCells[neighbourIdx] === true) liveNeighbours++;
   }
 
-  return live_neighbours;
+  return liveNeighbours;
 }
 
 /**
